@@ -544,9 +544,9 @@ img {
   pointer-events: none;
 }
 .is-open{
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal {
