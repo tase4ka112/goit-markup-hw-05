@@ -89,8 +89,7 @@ img {
   gap: 40px;
 }
 
-.header-menu-item {
-}
+.header-menu-item {}
 
 .header-menu-link {
   display: block;
@@ -156,10 +155,8 @@ img {
 .hero {
   padding: 188px 0;
   background-color: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
     url(../images/img-people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -252,8 +249,7 @@ img {
   border-color: #8e8f99;
 }
 
-.features-icon {
-}
+.features-icon {}
 
 .features-subtitel {
   color: #2e2f42;
@@ -305,8 +301,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-img {
-}
+.team-img {}
 
 .team-container-text {
   padding: 32px 0;
@@ -402,8 +397,7 @@ img {
   cursor: pointer;
 }
 
-.portfolio-img {
-}
+.portfolio-img {}
 
 .portfolio-cover {
   position: relative;
@@ -489,7 +483,7 @@ img {
   max-width: 264px;
 }
 
-.footer-soc-container{
+.footer-soc-container {
   margin-right: 80px;
 }
 
@@ -534,7 +528,7 @@ img {
 }
 
 .footer-subscribe-titel {
-  color:  #FFF;
+  color: #FFF;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.50;
@@ -542,26 +536,33 @@ img {
   margin-bottom: 16px;
 }
 
-.footer-form{
+.footer-form {
   display: flex;
+  gap: 24px;
 }
 
-.footer-input{
+.footer-input {
   width: 264px;
   height: 40px;
-  margin-right: 24px;
   border-radius: 4px;
   border: 1px solid #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background-color:  #2E2F42;
-  padding: 16px 8px;
-  color: #FFF;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  padding-left: 16px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
 }
 
-.footer-form-btm{
-  width: 165px;
+.footer-input::placeholder {
+  color: #ffffff;
+}
+
+.footer-form-btm {
+  min-width: 165px;
   height: 40px;
-  color:  #FFF;
+  color: #FFF;
   text-align: center;
   font-family: inherit;
   font-size: 16px;
@@ -569,6 +570,7 @@ img {
   line-height: 1.50;
   letter-spacing: 0.04em;
   border-radius: 4px;
+  border: none;
   background: #4D5AE5;
   display: flex;
   align-items: center;
@@ -576,9 +578,9 @@ img {
   gap: 16px;
 }
 
-.footer-form-icon{
+.footer-form-icon {
   color: #FFFFFF;
-
+  margin-left: 16px;
 }
 
 
@@ -592,11 +594,12 @@ img {
   position: fixed;
   top: 0;
   background-color: rgba(46, 47, 66, 0.4);
-  opacity: 0;
-  visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
-.is-open{
+
+.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -610,10 +613,11 @@ img {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   position: absolute;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .modal-close-btn {
@@ -627,9 +631,22 @@ img {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-title {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close-btn:focus .modal-title {
   color: #2e2f42;
   text-align: center;
   font-family: Roboto;
@@ -641,6 +658,12 @@ img {
 }
 
 .modal-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: #ffffff;
 }
 
 .modal-field {
@@ -653,20 +676,23 @@ img {
 
 .modal-input {
   width: 100%;
-  height: 58px;
+  height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
   background-color: transparent;
   fill: #2E2F42;
   padding-left: 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus, .modal-text:focus {
+.modal-input:focus,
+.modal-text:focus {
   border-color: #4d5ae5;
+  fill: #4D5AE5;
 }
 
-.modal-input:focus + .modal-icon {
+.modal-input:focus+.modal-icon {
   stroke: #4d5ae5;
 }
 
@@ -687,6 +713,11 @@ img {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-field-textarea {
+  margin-bottom: 16px;
 }
 
 .modal-text {
@@ -694,17 +725,30 @@ img {
   height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
   padding: 8px 16px;
   resize: none;
   outline: transparent;
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.check-text{
+.modal-field-check {
+  margin-bottom: 24px;
+}
+
+.check-span {
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+}
+
+.check-text {
   color: #8E8F99;
   font-family: Roboto;
   font-size: 12px;
@@ -714,8 +758,8 @@ img {
   align-items: center;
 }
 
-.check-text a{
-  color:#4D5AE5;
+.check-text-a {
+  color: #4D5AE5;
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.33;
@@ -724,7 +768,8 @@ img {
   margin-bottom: 24px;
 }
 
-.check-text span{
+.check-text,
+.check-span {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.40);
@@ -735,27 +780,28 @@ img {
   fill: transparent;
 }
 
-.check-input:checked + .check-text span{
+.check-input:checked+.check-text span {
   background-color: #404BBF;
   border: none;
-  fill: #ffffff;
+  fill: #F4F4FD;
+  ;
 }
 
-.modal-submit-btn{
+.modal-submit-btn {
   border-radius: 4px;
   background: #4D5AE5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  width: 169px;
+  min-width: 169px;
   height: 56px;
-  color:  #FFF;
+  color: #FFF;
   text-align: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.50;
   letter-spacing: 0.04em;
   display: block;
   margin: 0 auto;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
