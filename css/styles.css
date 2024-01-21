@@ -779,8 +779,6 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
 }
 
 .check-text-a {
@@ -807,7 +805,6 @@ img {
   background-color: #404BBF;
   border: none;
   fill: #F4F4FD;
-  ;
 }
 
 .modal-submit-btn {
