@@ -782,11 +782,9 @@ img {
   line-height: 1.33;
   letter-spacing: 0.04em;
   text-decoration-line: underline;
-  margin-bottom: 24px;
 }
 
-.check-text,
-.heck-span {
+.check-text span {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.40);
