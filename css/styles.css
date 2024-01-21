@@ -666,6 +666,17 @@ img {
   fill: #ffffff;
 }
 
+.modal-title {
+  color: #2E2F42;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.50;
+  letter-spacing: 0.02em;
+  width: 360px;
+  height: 40px;
+}
+
 .modal-field {
   margin-bottom: 8px;
 }
@@ -738,6 +749,8 @@ img {
 
 .modal-field-check {
   margin-bottom: 24px;
+  display: inline-flex;
+
 }
 
 .check-span {
