@@ -749,7 +749,10 @@ img {
 
 .modal-field-check {
   margin-bottom: 24px;
-  display: inline-flex;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -761,7 +764,7 @@ img {
   display: inline-flex;
 }
 
-.check-text {
+.check-text span {
   color: #8E8F99;
   font-family: Roboto;
   font-size: 12px;
