@@ -542,6 +542,10 @@ img {
   margin-bottom: 16px;
 }
 
+.footer-form{
+  display: flex;
+}
+
 .footer-input{
   width: 264px;
   height: 40px;
@@ -566,6 +570,10 @@ img {
   letter-spacing: 0.04em;
   border-radius: 4px;
   background: #4D5AE5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .footer-form-icon{
